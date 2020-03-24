@@ -1,0 +1,16 @@
+[
+{
+  "modid": "apcsamod",
+  "name": "apcsamod",
+  "description": "mod for AP CSA",
+  "version": "1.0",
+  "mcversion": "1.12.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Drew, Joseph"],
+  "credits": "Drew, Joseph",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
