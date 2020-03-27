@@ -2,6 +2,8 @@ package drewJoseph.apcsamod;
 
 import drewJoseph.apcsamod.proxy.CommonProxy;
 import drewJoseph.apcsamod.util.Reference;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -12,7 +14,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME,version = Reference.VERSION)
 public class Main {
-	
+	public static Block modBlock;
 	@Instance
 	public static Main instance;
 	
@@ -21,7 +23,7 @@ public class Main {
 	
 	@EventHandler
 	public static void PreInit(FMLPreInitializationEvent event) {
-		
+		modBlock = new ModBlock(Material.LAVA,"amethyst");
 	}
 	
 	@EventHandler
@@ -34,3 +36,4 @@ public class Main {
 		
 	}
 }
+		
