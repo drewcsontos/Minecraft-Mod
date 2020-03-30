@@ -1,7 +1,9 @@
 package drewJoseph.apcsamod.proxy;import drewJoseph.apcsamod.init.ModBlocks;
 import drewJoseph.apcsamod.init.ModItems;
+import drewJoseph.apcsamod.util.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -18,4 +20,24 @@ public class CommonProxy {
         event.getRegistry().registerAll(ModItems.ITEMS.toArray(new Item[0]));
         
     }
+    @SubscribeEvent
+	public static void onModelRegister(ModelRegistryEvent event)
+	{
+		for(Item item : ModItems.ITEMS)
+		{
+			if(item instanceof IHasModel)
+			{
+				((IHasModel)item).registerModels();
+			}
+		}
+		
+		for(Block block : ModBlocks.BLOCKS)
+		{
+			if(block instanceof IHasModel)
+			{
+				((IHasModel)block).registerModels();
+			}
+		}
+	}
+    public void registerItemRenderer(Item item, int meta, String id) {}
 }
