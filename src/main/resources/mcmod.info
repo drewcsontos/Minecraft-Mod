@@ -1,14 +1,14 @@
 [
 {
-  "modid": "apcsamod",
-  "name": "apcsamod",
-  "description": "mod for AP CSA",
-  "version": "1.0",
-  "mcversion": "1.12.2",
+  "modid": "examplemod",
+  "name": "Example Mod",
+  "description": "Example placeholder mod.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["Drew, Joseph"],
-  "credits": "Drew, Joseph",
+  "authorList": ["ExampleDude"],
+  "credits": "The Forge and FML guys, for making this example",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
