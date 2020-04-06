@@ -1,15 +1,20 @@
 package drewJoseph.apcsamod;
 
+import drewJoseph.apcsamod.init.ModBlocks;
 import drewJoseph.apcsamod.init.ModItems;
 import drewJoseph.apcsamod.util.IHasModel;
 import drewJoseph.apcsamod.util.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityLargeFireball;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class Wand extends ItemSword implements IHasModel {
@@ -36,7 +41,6 @@ public class Wand extends ItemSword implements IHasModel {
 		worldIn.spawnEntity(f);
 		return super.onItemRightClick(worldIn, playerIn, handIn);
 	}
-
 	public void registerModels() {
 		Main.proxy.registerItemRenderer(this, 0, "inventory");
 	}
