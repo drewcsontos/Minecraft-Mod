@@ -1,0 +1,12 @@
+{
+   "parent": "block/cube",
+    "textures": {
+        "down": "apcsamod:blocks/blank",
+        "up": "apcsamod:blocks/blank",
+        "north": "apcsamod:blocks/blank",
+        "east": "apcsamod:blocks/blank",
+        "south": "apcsamod:blocks/blank",
+        "west": "apcsamod:blocks/blank",
+        "particle": "blocks/lava_still"
+    }
+}

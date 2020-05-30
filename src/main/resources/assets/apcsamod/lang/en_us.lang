@@ -1,3 +1,11 @@
 item.apcsamod.wand.name=Wand
 tile.apcsamod.chessblock.name=PortaChess
-item.ruby.name=Ruby
+tile.apcsamod.pawn.name=Pawn
+tile.apcsamod.rook.name=Rook
+tile.apcsamod.knight.name=Knight
+tile.apcsamod.bishop.name=Bishop
+tile.apcsamod.queen.name=Queen
+tile.apcsamod.king.name=King
+tile.apscsamod.blank.name=Blank
+itemGroup.ModItems=ModItems
+

@@ -1,6 +1,12 @@
 {
-   "parent": "block/cube_all",
-   "textures": {
-       "all": "apcsamod:blocks/chessblock"
-   }
+   "parent": "block/cube",
+    "textures": {
+        "down": "apcsamod:blocks/chesssides",
+        "up": "apcsamod:blocks/chessblock",
+        "north": "apcsamod:blocks/chesssides",
+        "east": "apcsamod:blocks/chesssides",
+        "south": "apcsamod:blocks/chesssides",
+        "west": "apcsamod:blocks/chesssides",
+        "particle": "blocks/lava_still"
+    }
 }

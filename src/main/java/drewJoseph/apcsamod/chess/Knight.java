@@ -4,8 +4,8 @@ import java.awt.Graphics;
 import java.awt.Point;
 
 public class Knight extends ChessPiece {
-	public Knight(int row, int col, int color) {
-		super(row, col, ChessPiece.ROOK, color);
+	public Knight(int row, int col, int color, Board board) {
+		super(row, col, ChessPiece.KNIGHT, color, board);
 	}
 
 	@Override

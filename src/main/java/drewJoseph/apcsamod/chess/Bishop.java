@@ -4,8 +4,8 @@ import java.awt.Graphics;
 import java.awt.Point;
 
 public class Bishop extends ChessPiece {
-	public Bishop(int row, int col, int color) {
-		super(row, col, ChessPiece.ROOK, color);
+	public Bishop(int row, int col, int color, Board board) {
+		super(row, col, ChessPiece.BISHOP, color, board);
 	}
 
 	@Override

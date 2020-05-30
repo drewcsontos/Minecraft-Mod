@@ -18,6 +18,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class Wand extends ItemSword implements IHasModel {
+	private float time;
 
 	public Wand(ToolMaterial material, String name) {
 		super(material);
@@ -29,6 +30,7 @@ public class Wand extends ItemSword implements IHasModel {
 
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
+		//if(worldIn.getTotalWorldTime()>time+5) {
 		EntityLargeFireball f = new EntityLargeFireball(worldIn, 0, 0, 0, 0, 0, 0);
 		f.setPositionAndRotation(playerIn.posX + playerIn.getLookVec().x, playerIn.posY + playerIn.getLookVec().y,
 				playerIn.posZ + playerIn.getLookVec().z, playerIn.cameraYaw, playerIn.cameraPitch);
@@ -39,9 +41,12 @@ public class Wand extends ItemSword implements IHasModel {
 		f.accelerationY = f.motionY * .1;
 		f.accelerationZ = f.motionZ * .1;
 		worldIn.spawnEntity(f);
+		time = worldIn.getTotalWorldTime();
+		//}
 		return super.onItemRightClick(worldIn, playerIn, handIn);
 	}
 	public void registerModels() {
 		Main.proxy.registerItemRenderer(this, 0, "inventory");
 	}
+
 }
